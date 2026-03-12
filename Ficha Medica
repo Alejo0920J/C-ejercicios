@@ -1,0 +1,48 @@
+using System;
+
+class FichaMedica
+{
+    static void Main()
+    {
+        string nombre, seguro;
+        int edad;
+        double peso, estatura;
+
+        Console.WriteLine("Ingrese el nombre del paciente ");
+        nombre = Console.ReadLine();
+
+        Console.WriteLine("Ingrese la edad ");
+        edad = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("Ingrese el peso en Kg ");
+        peso = double.Parse(Console.ReadLine());
+
+        Console.WriteLine("Ingrese la estatura en metros ");
+        estatura = double.Parse(Console.ReadLine());
+
+        Console.WriteLine("Tienes Seguro? (S/N): ");
+        seguro = Console.ReadLine();
+
+        double imc = peso / (estatura * estatura);
+
+        string categoria;
+
+        if (imc < 18.5)
+            categoria = "bajo peso";
+        else if (imc < 25)
+            categoria = "peso normal";
+        else if (imc < 30)
+            categoria = "sobrepeso";
+        else
+            categoria = "obesidad";
+
+        Console.WriteLine("\n==================================");
+        Console.WriteLine("====== FICHA MEDICA DEL PACIENTE =====");
+        Console.WriteLine("====================================");
+        Console.WriteLine(" Nombre del paciente:" + nombre);
+        Console.WriteLine("Edad del paciente:" + edad + "años");
+        Console.WriteLine("IMC del paciente: " + imc + " - " + categoria);
+        Console.WriteLine("Seguro: " + seguro);
+        Console.Write("Vuelve al consultorio de Alejo");
+    }
+}
