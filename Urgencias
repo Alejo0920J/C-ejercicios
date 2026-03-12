@@ -1,0 +1,38 @@
+using System;
+
+class Urgencias
+{
+    static void Main()
+    {
+        string nombre;
+        int presion;
+        double temperatura;
+
+        Console.WriteLine("ingrese la temperatura corporal ");
+        temperatura = double.Parse(Console.ReadLine());
+
+        Console.WriteLine("ingrese la Presion");
+        presion = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("\n==============");
+
+
+        if (temperatura > 39 || presion > 180)
+        {
+            Console.WriteLine("TRIAJE: ROJO (Crítico)");
+            Console.WriteLine("Recomendación: Atención inmediata requerida.");
+        }
+        else if (temperatura > 38 || presion > 140)
+        {
+            Console.WriteLine("TRIAJE: AMARILLO (Urgente)");
+            Console.WriteLine("Recomendación: Atención médica lo antes posible.");
+        }
+        else
+        {
+            Console.WriteLine("TRIAJE: VERDE (Estable)");
+            Console.WriteLine("Recomendación: Paciente estable, esperar turno.");
+        }
+
+        Console.WriteLine("------------------------------");
+    }
+}
