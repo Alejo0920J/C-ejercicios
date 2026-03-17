@@ -1,0 +1,25 @@
+using System;
+
+class controldevacunass
+
+{
+    static void Main()
+    {
+        int total = 0;
+        int vacunas;
+        
+        for (int i= 1; i<= 7; i++)
+        {
+            Console.Write("Ingrese las vacunas del dia" + i + ": ");
+            vacunas = int.Parse(Console.ReadLine());
+            
+            total += vacunas;
+        }
+        
+        double promedio = total / 7.0;
+        
+        Console.WriteLine("\n==== REPORTE ====");
+        Console.WriteLine("Total de vacunas: " + total);
+        Console.WriteLine("Promedio diario: " + promedio);
+    }
+}
