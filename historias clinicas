@@ -1,0 +1,28 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string entrada;
+        int numero;
+
+        while (true)
+        {
+            try
+            {
+                Console.Write("Ingrese numero de historia clinica: ");
+                entrada = Console.ReadLine();
+
+                numero = int.Parse(entrada);
+
+                Console.WriteLine("Historia " + numero + " registrada correctamente.");
+                break;
+            }
+            catch
+            {
+                Console.WriteLine("Error: Solo se permiten numeros.\n");
+            }
+        }
+    }
+}
